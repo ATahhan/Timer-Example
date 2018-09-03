@@ -10,13 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var clock : Clock!
+    // TODO : please create instance here from class `Clock`
+    // var ... etc
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        let timer = MyTimer(counter: 0)
-        clock = Clock(timer: timer)
+        
+        // TODO : please init clock object your class
+        
     }
 
     override func didReceiveMemoryWarning() {
