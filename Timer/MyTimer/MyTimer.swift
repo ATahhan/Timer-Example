@@ -8,16 +8,21 @@
 
 import Foundation
 
-protocol MyTimerDelegate {
+protocol MyTimerDelegate : class {
+    
     func start(timer: MyTimer)
     func current(timer: MyTimer, counter: Int)
-    func stop(timer: MyTimer)
-    func fnish(timer: MyTimer)
+    
+    // TODO: ask student to add these function to be implemnted 'stop & finsh function
+    
 }
 
 class MyTimer {
     
-    var delegate : MyTimerDelegate?
+    
+    // ToDo: create a delegate object of type : MyTimerDelegate.
+    weak var delegate : MyTimerDelegate?
+    
     var counter : Int = 0
     var timer : Timer?
     
@@ -35,9 +40,9 @@ class MyTimer {
             timer.fire()
         }else {
             timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
+                
                 if self.counter == 30 {
-                    self.delegate?.fnish(timer: self)
-                    self.delegate?.stop(timer: self)
+                    // ToDo: use delegate to call stop & finish function
                     timer.invalidate()
                 }else {
                     self.counter = self.counter + 1
