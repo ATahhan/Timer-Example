@@ -14,9 +14,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
-        let timer = MyTimer(counter: 0)
-        clock = Clock(timer: timer)
+        
+        clock = Clock(counter: 3)
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -13,14 +13,15 @@ import Foundation
  *
  */
 
-class Clock : MyTimerDelegate {
+
+// TODO : Confirm to MyTimerDelegate & start implement missing functions
+class Clock {
     
-    var myTimer: MyTimer!
-    init(timer: MyTimer) {
-        myTimer = timer
-        myTimer.delegate = self
-        myTimer.startTimer()
-    }
+    // TODO : create an instance/object of MyTimer class with name `myTimer`
+    
+    
+    // TODO : create an init(counter: Int)
+    
     
     func start(timer: MyTimer) {
         print("Start")
@@ -30,10 +31,8 @@ class Clock : MyTimerDelegate {
         print("Stop")
     }
     
+    // TODO : please implement current function
     
-    func current(timer: MyTimer, counter: Int) {
-        print(counter)
-    }
     
     func fnish(timer: MyTimer) {
         print("fnish")
