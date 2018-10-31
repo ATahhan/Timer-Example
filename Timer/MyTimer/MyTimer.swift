@@ -14,8 +14,7 @@ protocol MyTimerDelegate : class {
     func current(timer: MyTimer, counter: Int)
     
     // TODO: ask student to add these function to be implemnted 'stop & finsh function
-    func stop(timer: MyTimer, counter: Int)
-    func finish(timer: MyTimer)
+    
 }
 
 class MyTimer {
@@ -45,8 +44,7 @@ class MyTimer {
                 if self.counter == 30 {
                     // ToDo: use delegate to call stop & finish function
                     timer.invalidate()
-                    self.delegate?.stop(timer: self, counter: self.counter)
-                    self.delegate?.finish(timer: self)
+                    
                 }else {
                     self.counter = self.counter + 1
                     self.delegate?.current(timer: self, counter: self.counter)

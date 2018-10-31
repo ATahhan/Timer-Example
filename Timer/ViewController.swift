@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     // TODO : please create instance here from class `Clock`
     // var ... etc
-    var clock : Clock!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,9 +34,8 @@ class ViewController: UIViewController {
             return
         }
         self.counterLabel.text = "\(counter)"
-        // TODO : please init clock object your class
-        self.clock = Clock(counter: counter)
-        self.clock.delegate = self
+        // TODO : please init clock object your class and confirm to delegate
+        
     }
     
     func showAlert() {
@@ -48,13 +47,6 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: ClockUpdateDelegate {
-    func current(counter: Int) {
-        self.counterLabel.text = "\(counter)"
-    }
-    
-    func finish() {
-        self.counterLabel.text = "finish!"
-    }
-}
+// TODO : confirm to `ClockUpdateDelegate` from Clock class and implement delegate function
+
 
