@@ -9,11 +9,9 @@
 import Foundation
 
 protocol MyTimerDelegate : class {
-    
     func start(timer: MyTimer, counter: Int)
     func current(timer: MyTimer, counter: Int)
-    
-    // TODO: ask student to add these function to be implemnted 'stop & finsh function
+    // TODO: Add these functions to be implemented 'stop(timer:counter:) & finish(counter:)'
     
 }
 
@@ -32,7 +30,7 @@ class MyTimer {
     
     
     /*
-     * This function will trigger the timer in case the timer is not null (timer is option) or in will construct timer object to start counting.
+     * This function will trigger the timer in case the timer is not null (timer is option) or it will construct timer object to start counting. Counter will always stop at 30.
      *
      */
     func startTimer() {
@@ -42,8 +40,8 @@ class MyTimer {
             timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
                 
                 if self.counter == 30 {
-                    // ToDo: use delegate to call stop & finish function
                     timer.invalidate()
+                    // ToDo: use delegate to call stop & finish function
                     
                 }else {
                     self.counter = self.counter + 1
@@ -54,7 +52,7 @@ class MyTimer {
     }
     
     /*
-     * This function will stop timer in case it's not null. (Timer is optional), if not stop func will print in console ("Timer is not init yet  😅!")
+     * This function will stop timer in case it's not null (Timer is optional). If it's, stop func will print in console ("Timer is not init yet 😅!")
      *
      *
      */
@@ -64,7 +62,7 @@ class MyTimer {
             self.stopTimer()
             
         }else {
-            print("Timer is not init yet  😅!")
+            print("Timer is not init yet 😅!")
         }
     }
 }

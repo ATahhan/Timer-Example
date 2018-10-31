@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <development version="8000" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,14 +43,14 @@
                                 <rect key="frame" x="16" y="167.5" width="343" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0 - 30 " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6GH-kM-iCQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="241" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nr-NU-zDn">
-                                        <rect key="frame" x="249" y="0.0" width="94" height="30"/>
-                                        <state key="normal" title="Start Countr !"/>
+                                        <rect key="frame" x="241" y="0.0" width="102" height="30"/>
+                                        <state key="normal" title="Start Counter !"/>
                                         <connections>
                                             <action selector="startCounterAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YtX-K4-VIv"/>
                                         </connections>
@@ -74,6 +74,7 @@
                             <constraint firstItem="lj7-Gg-8El" firstAttribute="top" secondItem="dML-X3-o4x" secondAttribute="bottom" constant="64" id="nEn-sZ-Jgc"/>
                             <constraint firstAttribute="trailing" secondItem="lj7-Gg-8El" secondAttribute="trailing" constant="16" id="oVx-kT-tBP"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="l9n-N0-NYH"/>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="hJk-dl-7ey" id="wNs-7B-zxR"/>

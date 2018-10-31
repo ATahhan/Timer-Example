@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var counterTextField: UITextField!
     
-    // TODO : please create instance here from class `Clock`
+    // TODO : Please create instance here from class `Clock`
     // var ... etc
     
     override func viewDidLoad() {
@@ -34,12 +34,12 @@ class ViewController: UIViewController {
             return
         }
         self.counterLabel.text = "\(counter)"
-        // TODO : please init clock object your class and confirm to delegate
+        // TODO : please init clock object and conform to its delegate
         
     }
     
     func showAlert() {
-        let alert = UIAlertController(title: "Warning", message: "Text Field input should be a positive number", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Warning", message: "Text Field input should be between 0 and 30", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)
@@ -47,6 +47,6 @@ class ViewController: UIViewController {
     
 }
 
-// TODO : confirm to `ClockUpdateDelegate` from Clock class and implement delegate function
+// TODO : conform to `ClockUpdateDelegate` from Clock class and implement delegate functions
 
 
