@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     func showAlert() {
-        let alert = UIAlertController(title: "Warning", message: "Text Field input should be a positive number", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Warning", message: "Text Field input should be between 0 and 30", preferredStyle: UIAlertControllerStyle.alert)
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         alert.addAction(okAction)
         present(alert, animated: true, completion: nil)

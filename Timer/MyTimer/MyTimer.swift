@@ -32,7 +32,7 @@ class MyTimer {
     
     
     /*
-     * This function will trigger the timer in case the timer is not null (timer is option) or in will construct timer object to start counting.
+     * This function will trigger the timer in case the timer is not null (timer is option) or in will construct timer object to start counting. Timer will always stop at 30.
      *
      */
     func startTimer() {
@@ -54,7 +54,7 @@ class MyTimer {
     }
     
     /*
-     * This function will stop timer in case it's not null. (Timer is optional), if not stop func will print in console ("Timer is not init yet  😅!")
+     * This function will stop timer in case it's not null. (Timer is optional), if not stop func will print in console ("Timer is not init yet 😅!")
      *
      *
      */
@@ -63,7 +63,7 @@ class MyTimer {
             timer.invalidate()
             self.stopTimer()
         }else {
-            print("Timer is not init yet  😅!")
+            print("Timer is not init yet 😅!")
         }
     }
 }
