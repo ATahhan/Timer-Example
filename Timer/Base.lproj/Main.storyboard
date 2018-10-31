@@ -5,8 +5,8 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
+        <development version="8000" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,12 +14,16 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0pw-sa-i4C"/>
+                        <viewControllerLayoutGuide type="bottom" id="CnQ-yw-TnU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QtY-Rz-4vf">
-                                <rect key="frame" x="146.5" y="333.5" width="82.5" height="20.5"/>
+                                <rect key="frame" x="146.5" y="323.5" width="82.5" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASe-QI-Fb9">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="20.5"/>
@@ -62,15 +66,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="QtY-Rz-4vf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0QX-n0-efs"/>
-                            <constraint firstItem="lj7-Gg-8El" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7WA-dL-vkz"/>
-                            <constraint firstItem="QtY-Rz-4vf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="A5u-dO-oWu"/>
-                            <constraint firstItem="dML-X3-o4x" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NlG-nB-RGD"/>
-                            <constraint firstItem="dML-X3-o4x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="UVv-vo-q9g"/>
+                            <constraint firstItem="QtY-Rz-4vf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0QX-n0-efs"/>
+                            <constraint firstItem="lj7-Gg-8El" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="7WA-dL-vkz"/>
+                            <constraint firstItem="QtY-Rz-4vf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="A5u-dO-oWu"/>
+                            <constraint firstItem="dML-X3-o4x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NlG-nB-RGD"/>
+                            <constraint firstItem="dML-X3-o4x" firstAttribute="top" secondItem="0pw-sa-i4C" secondAttribute="bottom" constant="26" id="UVv-vo-q9g"/>
                             <constraint firstItem="lj7-Gg-8El" firstAttribute="top" secondItem="dML-X3-o4x" secondAttribute="bottom" constant="64" id="nEn-sZ-Jgc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lj7-Gg-8El" secondAttribute="trailing" constant="16" id="oVx-kT-tBP"/>
+                            <constraint firstAttribute="trailing" secondItem="lj7-Gg-8El" secondAttribute="trailing" constant="16" id="oVx-kT-tBP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="hJk-dl-7ey" id="wNs-7B-zxR"/>
