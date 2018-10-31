@@ -8,16 +8,21 @@
 
 import Foundation
 
-protocol MyTimerDelegate {
-    func start(timer: MyTimer)
+protocol MyTimerDelegate : class {
+    
+    func start(timer: MyTimer, counter: Int)
     func current(timer: MyTimer, counter: Int)
-    func stop(timer: MyTimer)
-    func fnish(timer: MyTimer)
+    
+    func stop(timer: MyTimer, counter: Int)
+    func finish(timer: MyTimer)
 }
 
 class MyTimer {
     
-    var delegate : MyTimerDelegate?
+    
+    // ToDo: create a delegate object of type : MyTimerDelegate.
+    weak var delegate : MyTimerDelegate?
+    
     var counter : Int = 0
     var timer : Timer?
     
@@ -35,10 +40,11 @@ class MyTimer {
             timer.fire()
         }else {
             timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
+                
                 if self.counter == 30 {
-                    self.delegate?.fnish(timer: self)
-                    self.delegate?.stop(timer: self)
                     timer.invalidate()
+                    self.delegate?.stop(timer: self, counter: self.counter)
+                    self.delegate?.finish(timer: self)
                 }else {
                     self.counter = self.counter + 1
                     self.delegate?.current(timer: self, counter: self.counter)
@@ -55,6 +61,7 @@ class MyTimer {
     func stopTimer() {
         if let timer = self.timer {
             timer.invalidate()
+            self.stopTimer()
         }else {
             print("Timer is not init yet  😅!")
         }
