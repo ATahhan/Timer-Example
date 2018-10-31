@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var counterTextField: UITextField!
     
-    // TODO : please create instance here from class `Clock`
-    // var ... etc
     var clock : Clock!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +32,6 @@ class ViewController: UIViewController {
             return
         }
         self.counterLabel.text = "\(counter)"
-        // TODO : please init clock object your class
         self.clock = Clock(counter: counter)
         self.clock.delegate = self
     }

@@ -8,11 +8,6 @@
 
 import Foundation
 
-/*
- * TODO : Here in this file plaeas create a class contatins 1 object called timer from MyTimer class. in `init` inisiate your timer and adopt MyTimer Delegate. don't forget to implement delegate func. Happy Coding!
- *
- */
-
 protocol ClockUpdateDelegate : class {
     func current(counter: Int)
     func finish()

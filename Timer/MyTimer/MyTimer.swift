@@ -13,7 +13,6 @@ protocol MyTimerDelegate : class {
     func start(timer: MyTimer, counter: Int)
     func current(timer: MyTimer, counter: Int)
     
-    // TODO: ask student to add these function to be implemnted 'stop & finsh function
     func stop(timer: MyTimer, counter: Int)
     func finish(timer: MyTimer)
 }
@@ -43,7 +42,6 @@ class MyTimer {
             timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: { timer in
                 
                 if self.counter == 30 {
-                    // ToDo: use delegate to call stop & finish function
                     timer.invalidate()
                     self.delegate?.stop(timer: self, counter: self.counter)
                     self.delegate?.finish(timer: self)
@@ -64,7 +62,6 @@ class MyTimer {
         if let timer = self.timer {
             timer.invalidate()
             self.stopTimer()
-            
         }else {
             print("Timer is not init yet  😅!")
         }
