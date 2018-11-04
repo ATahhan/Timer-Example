@@ -9,9 +9,8 @@
 import Foundation
 
 protocol MyTimerDelegate : class {
-    func start(timer: MyTimer, counter: Int)
     func current(timer: MyTimer, counter: Int)
-    // TODO: Add these functions to be implemented 'stop(timer:counter:) & finish(counter:)'
+    // TODO: Add a function to be implemented 'finish(counter:)'
     
 }
 
@@ -41,7 +40,7 @@ class MyTimer {
                 
                 if self.counter == 30 {
                     timer.invalidate()
-                    // ToDo: use delegate to call stop & finish function
+                    // ToDo: use delegate to call finish function
                     
                 }else {
                     self.counter = self.counter + 1
